@@ -1,7 +1,7 @@
 import { format, parseISO } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import { MDXContent } from '@/components/MDXContent';
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
@@ -11,12 +11,9 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   return { title: post.title };
 };
 
-const PostLayout = ({ params }: { params: { slug: string } }) => {
+const PostLayout = async ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
-
-  const MDXContent = useMDXComponent(post.body.code);
-
   return (
     <main className="py-8">
       <article className="prose dark:prose-invert">
@@ -25,7 +22,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           {format(parseISO(post.date), 'yyyy-MM-dd')}
         </time>
         <hr className="my-4"></hr>
-        <MDXContent />
+        <MDXContent post={post} />
       </article>
     </main>
   );

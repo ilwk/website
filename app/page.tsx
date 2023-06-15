@@ -5,7 +5,7 @@ import { allPosts, Post } from 'contentlayer/generated';
 export default async function Home() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
   return (
-    <main className="py-8 prose prose-invert">
+    <main className="flex flex-col gap-2 py-8 prose prose-invert">
       {posts.map((post) => {
         return (
           <article className="flex gap-4" key={post._id}>
