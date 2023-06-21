@@ -1,5 +1,4 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { remarkCodeHike } from '@code-hike/mdx';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -20,7 +19,4 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [Post],
-  // mdx: {
-  //   remarkPlugins: [[remarkCodeHike, { theme: 'nord' }]],
-  // },
 });
