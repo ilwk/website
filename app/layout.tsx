@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -14,10 +15,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} min-h-screen  dark:bg-neutral-900 dark:text-neutral-50`}>
         <section className="max-w-2xl px-4 py-10 mx-auto ">
           <header className="flex items-baseline justify-between ">
-            <h1 className="text-3xl">VET3X</h1>
+            <Link href="/">
+              <h1 className="text-3xl">VET3X</h1>
+            </Link>
             <nav className="space-x-4">
-              <a href="/about">About</a>
-              <a href="/rss.xml">RSS</a>
+              <Link href="/about">About</Link>
+              <Link href="/rss.xml">RSS</Link>
             </nav>
           </header>
           {children}
