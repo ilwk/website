@@ -12,9 +12,7 @@ export default async function Home() {
             <time dateTime={post.date} className="min-w-[100px]">
               {format(parseISO(post.date), 'yyyy-MM-dd')}
             </time>
-            <Link className="flex-1" href={post.url}>
-              {post.title}
-            </Link>
+            <Link href={post.url}>{post.title}</Link>
           </article>
         );
       })}

@@ -18,10 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/">
               <h1 className="text-3xl">VET3X</h1>
             </Link>
-            <nav className="space-x-4">
-              <Link href="/about">About</Link>
-              <Link href="/rss.xml">RSS</Link>
-            </nav>
+            <nav className="space-x-4"></nav>
           </header>
           {children}
         </section>
