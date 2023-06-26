@@ -4,10 +4,10 @@ import HTMLReactParser from 'html-react-parser';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
 export const MDXContent = async ({ post }: { post: Post }) => {
-  const Component = useMDXComponent(post.body.code);
+  const Conetnt = useMDXComponent(post.body.code);
   const hightlight = await highlighterPromise;
   return (
-    <Component
+    <Conetnt
       components={{
         //
         pre: ({ children }: any = {}) => {
