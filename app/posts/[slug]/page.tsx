@@ -17,11 +17,7 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
   return (
     <main className="py-8">
       <article className="prose dark:prose-invert">
-        <h1 className="mb-2">{post.title}</h1>
-        <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-          {format(parseISO(post.date), 'yyyy-MM-dd')}
-        </time>
-        <hr className="my-4"></hr>
+        <h1>{post.title}</h1>
         <MDXContent post={post} />
       </article>
     </main>
