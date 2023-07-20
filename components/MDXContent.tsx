@@ -10,7 +10,6 @@ export const MDXContent = async ({ post }: { post: Post }) => {
   return (
     <Conetnt
       components={{
-        //
         pre: ({ children }: any = {}) => {
           const lang = children?.props.className?.split('-')[1];
           const html = hightlight.codeToHtml(String(children.props.children), { lang });

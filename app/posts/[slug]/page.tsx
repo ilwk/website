@@ -1,4 +1,3 @@
-import { format, parseISO } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { MDXContent } from '@/components/MDXContent';
