@@ -14,7 +14,7 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
   return (
-    <main className="py-8">
+    <main className="max-w-2xl px-4 py-8 mx-auto">
       <article className="prose dark:prose-invert">
         <h1>{post.title}</h1>
         <MDXContent post={post} />
