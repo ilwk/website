@@ -12,7 +12,7 @@ type NavLinkProps = {
 
 export default function NavLink({ href, children }: NavLinkProps) {
   const pathname = usePathname(); // active paths on dynamic subpages
-  const active = pathname.startsWith(href);
+  const active = pathname === href;
 
   return (
     <Link
