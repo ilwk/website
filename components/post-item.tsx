@@ -3,7 +3,7 @@ import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 import cx from 'clsx';
 
-export const PostItem: React.FC<{ value: Post }> = ({ value }) => {
+export const PostCard: React.FC<{ value: Post }> = ({ value }) => {
   const post = value;
   return (
     <Link className='block' href={post.url}>
@@ -16,6 +16,7 @@ export const PostItem: React.FC<{ value: Post }> = ({ value }) => {
         key={post._id}
       >
         <h1>{post.title}</h1>
+        <p className='text-neutral-500'>{post.summary}</p>
         <p>
           <time dateTime={post.date} className='text-neutral-500'>
             {format(parseISO(post.date), 'yyyy-MM-dd')}

@@ -1,6 +1,6 @@
 import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
-import { PostItem } from '@/components/post-item';
+import { PostCard } from '@/components/post-item';
 
 export default async function Blog() {
   const posts = allPosts.sort((a, b) =>
@@ -14,9 +14,9 @@ export default async function Blog() {
           <p className='text-neutral-500'>随手写的一些文章</p>
         </div>
       </section>
-      <section className='flex flex-col gap-3 prose prose-invert'>
+      <section className='flex flex-col gap-3 '>
         {posts.map((post) => {
-          return <PostItem value={post} key={post._id}></PostItem>;
+          return <PostCard value={post} key={post._id}></PostCard>;
         })}
       </section>
     </main>

@@ -1,6 +1,6 @@
 import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
-import { PostItem } from '@/components/post-item';
+import { PostCard } from '@/components/post-item';
 import Link from 'next/link';
 
 export default async function Home() {
@@ -20,10 +20,10 @@ export default async function Home() {
 
       <div className='space-y-4'>
         <h2>最热文章</h2>
-        <ul className='flex justify-between w-full gap-10'>
+        <ul className='flex justify-between w-full gap-12'>
           {topPosts.slice(0, 3).map((post) => (
-            <li key={post._id}>
-              <PostItem value={post}></PostItem>
+            <li className='flex-1 shrink-0' key={post._id}>
+              <PostCard value={post}></PostCard>
             </li>
           ))}
         </ul>
@@ -34,7 +34,7 @@ export default async function Home() {
           {latestPosts.map((post) => {
             return (
               <li key={post._id}>
-                <PostItem value={post}></PostItem>
+                <PostCard value={post}></PostCard>
               </li>
             );
           })}
