@@ -27,9 +27,9 @@ const links = [
 
 export const PageHeader = () => {
   return (
-    <header className='main-header bg-header sticky top-0 z-10 backdrop-blur-md'>
-      <nav className='mx-auto flex max-w-2xl items-center justify-between p-2 md:px-4'>
-        <ul className='flex items-center gap-2'>
+    <header className='sticky top-0 z-10 backdrop-blur-md'>
+      <nav className='navbar mx-auto flex max-w-2xl items-center justify-between'>
+        <ul className='flex items-center gap-1'>
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href}>{link.icon}</NavLink>
@@ -38,7 +38,11 @@ export const PageHeader = () => {
         </ul>
         <ul>
           <li>
-            <Link href='https://github.com/ilwk/website' target='_blank'>
+            <Link
+              className='btn btn-square btn-ghost'
+              href='https://github.com/ilwk/website'
+              target='_blank'
+            >
               <GitHubLogoIcon />
             </Link>
           </li>

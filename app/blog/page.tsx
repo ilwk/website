@@ -7,7 +7,7 @@ export default async function Blog() {
     compareDesc(new Date(a.date), new Date(b.date))
   );
   return (
-    <main className='mx-auto flex max-w-2xl flex-col gap-20 px-4 py-20'>
+    <>
       <div className='space-y-2'>
         <h1 className=''>Blog</h1>
         <p className='text-neutral-500'>随手写的一些文章</p>
@@ -23,6 +23,6 @@ export default async function Blog() {
           })}
         </ul>
       </div>
-    </main>
+    </>
   );
 }
