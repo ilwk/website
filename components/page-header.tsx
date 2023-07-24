@@ -38,7 +38,7 @@ export const PageHeader = () => {
         </ul>
         <ul>
           <li>
-            <Link href='https://github.com/ilwk/blog' target='_blank'>
+            <Link href='https://github.com/ilwk/website' target='_blank'>
               <GitHubLogoIcon />
             </Link>
           </li>
