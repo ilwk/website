@@ -1,36 +1,48 @@
-import Link from 'next/link';
-import { compareDesc, format, parseISO } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
+import { PostItem } from '@/components/post-item';
+import Link from 'next/link';
 
 export default async function Home() {
-  const posts = allPosts.sort((a, b) =>
+  const sortedPosts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
+  const topPosts = sortedPosts.filter((item) => item.pin);
+  const latestPosts = sortedPosts.slice(0, 5);
   return (
-    <main className='mx-auto flex max-w-2xl flex-col gap-20 px-4 py-20'>
-      <section className='space-y-2 text-neutral-500'>
+    <main className='flex flex-col max-w-2xl gap-20 px-4 py-20 mx-auto'>
+      <div className='space-y-2 text-neutral-500'>
         <h1 className='text-secondary'>VET3X</h1>
         <p>Hello! 欢迎来到我的主页</p>
         <p>我是一名前端, 我会在这里分享一些前端相关的技术内容</p>
         <p>还有一些与前端无关的个人生活内容</p>
-      </section>
-      <section className='prose prose-invert flex flex-col gap-3'>
-        {posts.map((post) => {
-          return (
-            <article className='flex gap-8' key={post._id}>
-              <time
-                dateTime={post.date}
-                className='w-28 shrink-0 text-neutral-500'
-              >
-                {format(parseISO(post.date), 'yyyy-MM-dd')}
-              </time>
-              <Link className='no-underline' href={post.url}>
-                {post.title}
-              </Link>
-            </article>
-          );
-        })}
-      </section>
+      </div>
+
+      <div className='space-y-4'>
+        <h2>最热文章</h2>
+        <ul className='flex justify-between w-full gap-10'>
+          {topPosts.slice(0, 3).map((post) => (
+            <li key={post._id}>
+              <PostItem value={post}></PostItem>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className='space-y-4'>
+        <h2>最新文章</h2>
+        <ul className='space-y-2'>
+          {latestPosts.map((post) => {
+            return (
+              <li key={post._id}>
+                <PostItem value={post}></PostItem>
+              </li>
+            );
+          })}
+          <li>
+            <Link href='/blog'>查看更多</Link>
+          </li>
+        </ul>
+      </div>
     </main>
   );
 }
