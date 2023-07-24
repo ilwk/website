@@ -2,7 +2,7 @@ import './globals.css';
 import { PageHeader } from '@/components/page-header';
 
 export const metadata = {
-  title: 'Vet3x',
+  title: 'VET3X',
   description:
     'Software engineer specializing in JavaScript-related technologies.',
 };
