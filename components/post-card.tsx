@@ -10,7 +10,7 @@ export const PostCard: React.FC<{ value: Post }> = ({ value }) => {
       <article
         className={cx(
           '-mx-4 space-y-2 rounded p-4',
-          'hover:bg-secondary hover:text-primary',
+          'hover:bg-neutral-800',
           'transition-colors'
         )}
         key={post._id}

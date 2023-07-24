@@ -20,8 +20,8 @@ export default function NavLink({ href, children, ...props }: NavLinkProps) {
       className={cn(
         'flex h-10 w-10 items-center justify-center rounded text-sm',
         'transition-colors',
-        'hover:bg-secondary hover:text-primary',
-        active ? 'bg-secondary text-primary' : 'text-secondary'
+        'hover:bg-neutral-800',
+        active ? 'bg-neutral-700' : 'text-secondary'
       )}
       href={href}
     >
