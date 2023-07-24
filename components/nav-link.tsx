@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import cn from 'clsx';
 import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 type NavLinkProps = {
   href: string;
