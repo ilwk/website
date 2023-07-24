@@ -1,17 +1,26 @@
-import { HomeIcon, FileTextIcon, FaceIcon } from '@radix-ui/react-icons';
+import {
+  HomeIcon,
+  FileTextIcon,
+  FaceIcon,
+  GitHubLogoIcon,
+} from '@radix-ui/react-icons';
 import NavLink from './nav-link';
+import Link from 'next/link';
 
 const links = [
   {
-    label: <HomeIcon />,
+    label: 'Home',
+    icon: <HomeIcon />,
     href: '/',
   },
   {
-    label: <FileTextIcon />,
+    label: 'Blog',
+    icon: <FileTextIcon />,
     href: '/blog',
   },
   {
-    label: <FaceIcon />,
+    label: 'About',
+    icon: <FaceIcon />,
     href: '/about',
   },
 ];
@@ -19,13 +28,20 @@ const links = [
 export const PageHeader = () => {
   return (
     <header className='main-header bg-header sticky top-0 z-10 backdrop-blur-md'>
-      <nav className='mx-auto flex max-w-2xl items-center justify-between p-2 md:px-4 '>
+      <nav className='mx-auto flex max-w-2xl items-center justify-between p-2 md:px-4'>
         <ul className='flex items-center gap-2'>
           {links.map((link) => (
             <li key={link.href}>
-              <NavLink href={link.href}>{link.label}</NavLink>
+              <NavLink href={link.href}>{link.icon}</NavLink>
             </li>
           ))}
+        </ul>
+        <ul>
+          <li>
+            <Link href='https://github.com/ilwk/blog' target='_blank'>
+              <GitHubLogoIcon />
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
