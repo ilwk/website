@@ -32,7 +32,7 @@ const links = [
 
 export const PageFooter = () => {
   return (
-    <footer className='footer mx-auto max-w-2xl px-4 py-10 text-neutral-content'>
+    <footer className='footer mx-auto max-w-2xl px-4 py-10 text-base-content'>
       {chunk(links, 2).map((chunk, index) => (
         <div key={index}>
           {chunk.map((link) => (

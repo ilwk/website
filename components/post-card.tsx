@@ -10,12 +10,12 @@ export const PostCard: React.FC<{ value: Post }> = ({ value }) => {
       <article
         className={cx(
           '-mx-4 space-y-2 rounded p-4',
-          'hover:bg-neutral-800',
+          'hover:bg-neutral-900',
           'transition-colors'
         )}
         key={post._id}
       >
-        <h1>{post.title}</h1>
+        <h1 className='text-base-content'>{post.title}</h1>
         <p className='text-neutral-500'>{post.summary}</p>
         <p>
           <time dateTime={post.date} className='text-neutral-500'>

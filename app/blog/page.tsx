@@ -10,7 +10,7 @@ export default async function Blog() {
     <>
       <div className='space-y-2'>
         <h1 className=''>Blog</h1>
-        <p className='text-neutral-500'>随手写的一些文章</p>
+        <p className='text-base-content'>随手写的一些文章</p>
       </div>
       <div>
         <ul>
