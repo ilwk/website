@@ -39,7 +39,7 @@ export const PageHeader = () => {
         <ul>
           <li>
             <Link
-              className='btn btn-square btn-ghost'
+              className='btn btn-ghost'
               href='https://github.com/ilwk/website'
               target='_blank'
             >

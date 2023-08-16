@@ -12,12 +12,13 @@ type NavLinkProps = {
 
 export default function NavLink({ href, children, ...props }: NavLinkProps) {
   const pathname = usePathname(); // active paths on dynamic subpages
-  const active = href === '/' ? pathname === href : pathname.startsWith(href);
+  const active =
+    href === '/' ? pathname === href : String(pathname).startsWith(href);
 
   return (
     <Link
       {...props}
-      className={cn('btn btn-square btn-ghost', {
+      className={cn('btn btn-ghost', {
         'btn-active': active,
       })}
       href={href}
