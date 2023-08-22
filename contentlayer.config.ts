@@ -22,7 +22,6 @@ export const Blog = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
     summary: { type: 'string', require: false },
-    pin: { type: 'boolean', required: false },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
   },
   computedFields,

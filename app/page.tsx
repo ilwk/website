@@ -7,7 +7,7 @@ export default async function Home() {
   const sortedPosts = allBlogs.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
-  const topPosts = sortedPosts.filter((item) => item.pin);
+  const topPosts = sortedPosts.filter((item) => item.tags?.includes('hot'));
   const latestPosts = sortedPosts.slice(0, 5);
   return (
     <>
