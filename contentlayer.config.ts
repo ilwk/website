@@ -1,9 +1,21 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import gfm from 'remark-gfm';
+import {
+  ComputedFields,
+  defineDocumentType,
+  makeSource,
+} from 'contentlayer/source-files';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import rehypePrettyCode from 'rehype-pretty-code';
 
-export const Post = defineDocumentType(() => ({
-  name: 'Post',
+const computedFields: ComputedFields = {
+  url: {
+    type: 'string',
+    resolve: (post) => `/${post._raw.flattenedPath}`,
+  },
+};
+
+export const Blog = defineDocumentType(() => ({
+  name: 'Blog',
   filePathPattern: `blog/**/*.mdx`,
   contentType: 'mdx',
   fields: {
@@ -11,20 +23,16 @@ export const Post = defineDocumentType(() => ({
     date: { type: 'date', required: true },
     summary: { type: 'string', require: false },
     pin: { type: 'boolean', required: false },
+    tags: { type: 'list', of: { type: 'string' }, default: [] },
   },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: (post) => `/${post._raw.flattenedPath}`,
-    },
-  },
+  computedFields,
 }));
 
 export default makeSource({
-  contentDirPath: 'content',
-  documentTypes: [Post],
+  contentDirPath: 'data',
+  documentTypes: [Blog],
   mdx: {
-    remarkPlugins: [gfm],
+    remarkPlugins: [remarkGfm, remarkMath],
     rehypePlugins: [
       [
         rehypePrettyCode,

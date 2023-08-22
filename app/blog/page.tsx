@@ -1,9 +1,9 @@
 import { compareDesc } from 'date-fns';
-import { allPosts } from 'contentlayer/generated';
+import { allBlogs } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
 
 export default async function Blog() {
-  const posts = allPosts.sort((a, b) =>
+  const posts = allBlogs.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
   return (
