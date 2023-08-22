@@ -1,6 +1,6 @@
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { MDXContent } from '@/components/MDXContent';
+import { MDXContent } from '@/components/mdx-content';
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
