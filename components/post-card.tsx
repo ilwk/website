@@ -1,9 +1,9 @@
-import { Blog } from '@/.contentlayer/generated';
+import { Posts } from '@/.contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 import cx from 'clsx';
 
-export const PostCard: React.FC<{ value: Blog }> = ({ value }) => {
+export const PostCard: React.FC<{ value: Posts }> = ({ value }) => {
   const post = value;
   return (
     <Link className='block' href={post.url}>

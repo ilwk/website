@@ -1,10 +1,10 @@
 import { compareDesc } from 'date-fns';
-import { allBlogs } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
 import Link from 'next/link';
 
 export default async function Home() {
-  const sortedPosts = allBlogs.sort((a, b) =>
+  const sortedPosts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
   const topPosts = sortedPosts.filter((item) => item.tags?.includes('hot'));

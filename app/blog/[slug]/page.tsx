@@ -1,22 +1,33 @@
-import { allBlogs } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { MDXContent } from '@/components/mdx-content';
 
-export const generateStaticParams = async () =>
-  allBlogs.map((post) => ({ slug: post._raw.flattenedPath }));
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const post = allBlogs.find((post) =>
-    post._raw.flattenedPath.endsWith(params.slug)
-  );
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+const getPostBySlug = (slug: string) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath.endsWith(slug));
+  return post;
+};
+
+export const generateStaticParams = async () =>
+  allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }));
+
+export const generateMetadata = ({ params }: PageProps) => {
+  const post = getPostBySlug(params.slug);
+  if (!post) {
+    return {};
+  }
   return { title: post.title };
 };
 
-const PostLayout = async ({ params }: { params: { slug: string } }) => {
-  const post = allBlogs.find((post) =>
-    post._raw.flattenedPath.endsWith(params.slug)
-  );
+const PostLayout = async ({ params }: PageProps) => {
+  const post = getPostBySlug(params.slug);
   if (!post) notFound();
   return (
     <>
