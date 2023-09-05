@@ -15,11 +15,11 @@ export const PostCard: React.FC<{ value: Posts }> = ({ value }) => {
         )}
         key={post._id}
       >
-        <h1 className='text-base-content'>{post.title}</h1>
+        <h1 className='text-base-content'>{post.name}</h1>
         <p className='text-neutral-500'>{post.summary}</p>
         <p>
           <time dateTime={post.date} className='text-neutral-500'>
-            {format(parseISO(post.date), 'yyyy-MM-dd')}
+            {format(parseISO(String(post.date)), 'yyyy-MM-dd')}
           </time>
         </p>
       </article>

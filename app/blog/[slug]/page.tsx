@@ -1,6 +1,6 @@
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { MDXContent } from '@/components/mdx-content';
+import { Content } from '@/components/content';
 
 interface PageProps {
   params: {
@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 const getPostBySlug = (slug: string) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath.endsWith(slug));
+  const post = allPosts.find((post) => post._id === slug);
   return post;
 };
 
@@ -23,7 +23,7 @@ export const generateMetadata = ({ params }: PageProps) => {
   if (!post) {
     return {};
   }
-  return { title: post.title };
+  return { title: post.name };
 };
 
 const PostLayout = async ({ params }: PageProps) => {
@@ -32,8 +32,8 @@ const PostLayout = async ({ params }: PageProps) => {
   return (
     <>
       <article className='prose max-w-full'>
-        <h1>{post.title}</h1>
-        <MDXContent post={post} />
+        <h1>{post.name}</h1>
+        <Content post={post} />
       </article>
     </>
   );

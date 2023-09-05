@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default async function Home() {
   const sortedPosts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
+    compareDesc(new Date(String(a.date)), new Date(String(b.date)))
   );
-  const topPosts = sortedPosts.filter((item) => item.tags?.includes('hot'));
+  // const topPosts = sortedPosts.filter((item) => item.tags?.includes('hot'));
   const latestPosts = sortedPosts.slice(0, 5);
   return (
     <>
@@ -18,7 +18,7 @@ export default async function Home() {
         <p>还有一些与前端无关的个人生活内容</p>
       </div>
 
-      <div className='space-y-4'>
+      {/* <div className='space-y-4'>
         <h2 className='text-neutral-300'>最热文章</h2>
         <ul className='flex w-full justify-between gap-12'>
           {topPosts.slice(0, 3).map((post) => (
@@ -27,9 +27,9 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
       <div className='space-y-4'>
-        <h2 className='text-neutral-300'>最新文章</h2>
+        {/* <h2 className='text-neutral-300'>最新文章</h2> */}
         <ul className='space-y-2'>
           {latestPosts.map((post) => {
             return (

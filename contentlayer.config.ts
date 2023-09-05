@@ -1,44 +1,30 @@
-import {
-  ComputedFields,
-  defineDocumentType,
-  makeSource,
-} from 'contentlayer/source-files';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import rehypePrettyCode from 'rehype-pretty-code';
+import { makeSource, defineDatabase } from 'contentlayer-source-notion';
+import { Client } from '@notionhq/client';
 
-const computedFields: ComputedFields = {
-  url: {
-    type: 'string',
-    resolve: (post) => `/${post._raw.flattenedPath}`,
-  },
-};
+const client = new Client({
+  auth: process.env.NOTION_TOKEN,
+});
 
-export const Posts = defineDocumentType(() => ({
+export const Posts = defineDatabase(() => ({
   name: 'Posts',
-  filePathPattern: `blog/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    date: { type: 'date', required: true },
-    summary: { type: 'string', require: false },
-    tags: { type: 'list', of: { type: 'string' }, default: [] },
+  databaseId: String(process.env.NOTION_DB_ID),
+  properties: {
+    date: {
+      name: 'Created',
+    },
+    summary: {
+      name: 'AI summary',
+    },
   },
-  computedFields,
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: (post) => `/blog/${post._id}`,
+    },
+  },
 }));
 
 export default makeSource({
-  contentDirPath: 'data',
-  documentTypes: [Posts],
-  mdx: {
-    remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [
-      [
-        rehypePrettyCode,
-        {
-          theme: 'nord',
-        },
-      ],
-    ],
-  },
+  client,
+  databaseTypes: [Posts],
 });
