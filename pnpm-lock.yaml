@@ -46,12 +46,12 @@ dependencies:
     version: 2.0.0
   tailwindcss-animate:
     specifier: ^1.0.6
-    version: 1.0.6(tailwindcss@3.3.7)
+    version: 1.0.6(tailwindcss@3.4.0)
 
 devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.9
-    version: 0.5.9(tailwindcss@3.3.7)
+    version: 0.5.9(tailwindcss@3.4.0)
   '@types/lodash-es':
     specifier: ^4.17.8
     version: 4.17.8
@@ -101,8 +101,8 @@ devDependencies:
     specifier: ^6.0.0
     version: 6.0.0
   tailwindcss:
-    specifier: 3.3.7
-    version: 3.3.7
+    specifier: 3.4.0
+    version: 3.4.0
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -1298,7 +1298,7 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.7):
+  /@tailwindcss/typography@0.5.9(tailwindcss@3.4.0):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -1307,7 +1307,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.7
+      tailwindcss: 3.4.0
     dev: true
 
   /@types/acorn@4.0.6:
@@ -5107,16 +5107,16 @@ packages:
       '@babel/runtime': 7.23.2
     dev: false
 
-  /tailwindcss-animate@1.0.6(tailwindcss@3.3.7):
+  /tailwindcss-animate@1.0.6(tailwindcss@3.4.0):
     resolution: {integrity: sha512-4WigSGMvbl3gCCact62ZvOngA+PRqhAn7si3TQ3/ZuPuQZcIEtVap+ENSXbzWhpojKB8CpvnIsrwBu8/RnHtuw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
-      tailwindcss: 3.3.7
+      tailwindcss: 3.4.0
     dev: false
 
-  /tailwindcss@3.3.7:
-    resolution: {integrity: sha512-pjgQxDZPvyS/nG3ZYkyCvsbONJl7GdOejfm24iMt2ElYQQw8Jc4p0m8RdMp7mznPD0kUhfzwV3zAwa80qI0zmQ==}
+  /tailwindcss@3.4.0:
+    resolution: {integrity: sha512-VigzymniH77knD1dryXbyxR+ePHihHociZbXnLZHUyzf2MMs2ZVqlUrZ3FvpXP8pno9JzmILt1sZPD19M3IxtA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
