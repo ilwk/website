@@ -1,0 +1,49 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="mx-auto flex min-h-screen max-w-2xl flex-col gap-20 py-20">
+      <section>
+        <ul class="grid justify-items-stretch gap-6">
+          {
+            posts.map((post) => (
+              <li>
+                <a class="card sm:card-side hover:bg-base-200 transition-colors sm:max-w-none" href={`/blog/${post.slug}/`}>
+                  <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
+                    <img
+                      loading="lazy"
+                      class="border-base-content bg-base-300 rounded-btn border border-opacity-5"
+                      width={160}
+                      height={90}
+                      src={post.data.heroImage || `https://picsum.photos/seed/${post.data.title}/160/90`}
+                      alt=""
+                    />
+                  </figure>
+                  <div class="card-body">
+                    <h4 class="card-title">{post.data.title}</h4>
+                    <p class="text-xs opacity-60">{post.data.description}</p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
