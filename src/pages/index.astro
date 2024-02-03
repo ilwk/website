@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="mx-auto min-h-screen max-w-2xl px-4 py-20 prose">
+      <h1>🧑‍🚀 Hello, everyone!</h1>
+      <p>Welcome to my website.</p>
+      <p>I am a front-end developer and I will share some front-end related technical content here.</p>
+    </main>
+    <Footer />
+  </body>
+</html>
