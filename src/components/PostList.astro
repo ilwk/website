@@ -1,0 +1,27 @@
+---
+import PostCard from './PostCard.astro';
+interface Post {
+  data: {
+    title: string;
+    description: string;
+    heroImage?: string;
+  };
+  slug: string;
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="grid justify-items-stretch gap-6">
+  {
+    posts.map((post) => (
+      <li>
+        <PostCard post={post} />
+      </li>
+    ))
+  }
+</ul>
