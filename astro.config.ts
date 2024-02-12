@@ -4,9 +4,15 @@ import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
 
 import sitemap from '@astrojs/sitemap';
+import { SITE } from './src/consts';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: SITE.website,
   integrations: [mdx(), sitemap(), tailwind(), icon()],
+  markdown: {
+    shikiConfig: {
+      theme: 'one-dark-pro',
+    },
+  },
 });

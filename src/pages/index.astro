@@ -1,27 +1,44 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+import PostList from '../components/PostList.astro'
+import { getCollection } from 'astro:content'
+import { getSortedPosts } from '../utils'
+
+const posts = await getCollection('blog')
+const sortedPosts = getSortedPosts(posts)
+const featuredPosts = await sortedPosts.filter(({ data }) => data.featured)
+const recentPosts = await sortedPosts.filter(({ data }) => !data.featured)
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main class="mx-auto min-h-screen max-w-2xl px-4 py-20 prose">
-      <section>
-        <h1>👋 Hello, world!</h1>
-        <p>Welcome to my website.</p>
-        <p>I am a front-end developer and I will share some front-end related technical content here.</p>
-      </section>
-      <section>
-        <h2>🧑‍🚀 Projects</h2>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+	<Header />
+	<main class="prose mx-auto min-h-screen max-w-2xl px-4 py-20">
+		<section>
+			<h1>👋 Hello, world!</h1>
+			<p>Welcome to my website.</p>
+			<p>
+				I am a front-end developer and I will share some front-end related technical content here.
+			</p>
+		</section>
+		{
+			featuredPosts.length > 0 && (
+				<section>
+					<h2>Featured</h2>
+					<PostList posts={featuredPosts} />
+				</section>
+			)
+		}
+
+		{
+			recentPosts.length > 0 && (
+				<section>
+					<h2>Recent Posts</h2>
+					<PostList posts={recentPosts} />
+				</section>
+			)
+		}
+	</main>
+	<Footer />
+</Layout>

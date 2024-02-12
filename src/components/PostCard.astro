@@ -1,31 +1,28 @@
 ---
-interface Props {
-  post: {
-    data: {
-      title: string;
-      description: string;
-      heroImage?: string;
-    };
-    slug: string;
-  };
-}
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
 
-const { post } = Astro.props;
+type Props = CollectionEntry<'blog'>;
+
+const { data: post, slug } = Astro.props;
 ---
 
-<a class="card sm:card-side hover:bg-base-200 transition-colors sm:max-w-none" href={`/blog/${post.slug}/`}>
+<a class="card sm:card-side hover:bg-base-200 transition-colors sm:max-w-none" href={`/blog/${slug}/`}>
   <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
     <img
       loading="lazy"
       class="border-base-content bg-base-300 rounded-btn border border-opacity-5"
       width={160}
       height={90}
-      src={post.data.heroImage || `https://picsum.photos/seed/${post.data.title}/160/90`}
-      alt=""
+      src={post.heroImage || `https://picsum.photos/seed/${post.title}/160/90`}
+      alt={`thumbnail of ${post.title}`}
     />
   </figure>
   <div class="card-body">
-    <h4 class="card-title">{post.data.title}</h4>
-    <p class="text-xs opacity-60">{post.data.description}</p>
+    <h4 class="card-title">{post.title}</h4>
+    <p class="text-xs opacity-60">{post.description}</p>
+    <p class="text-xs opacity-60">
+      <FormattedDate date={post.pubDate} />
+    </p>
   </div>
 </a>

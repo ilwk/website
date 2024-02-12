@@ -1,45 +1,42 @@
 ---
-import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
-import { Icon } from 'astro-icon/components';
+import { SITE_TITLE } from '../consts'
+import HeaderLink from './HeaderLink.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
-<header class="sticky top-0 z-10 backdrop-blur-md p-3">
-  <nav class="navbar bg-base-300 rounded-box mx-auto flex max-w-2xl">
-    <div class="navbar-start">
-      <a class="btn btn-ghost" href="/">
-        {SITE_TITLE}
-      </a>
-    </div>
-    <ul class="navbar-center flex items-center gap-1">
-      <li>
-        <HeaderLink href="/">Home</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink href="/blog">Blog</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink href="/about">About</HeaderLink>
-      </li>
-    </ul>
-    <ul class="navbar-end">
-      <li>
-        <HeaderLink class="btn btn-ghost" href="https://github.com/withastro/astro" target="_blank">
-          <Icon name={'radix-icons:github-logo'} title="github" />
-        </HeaderLink>
-      </li>
-      <li>
-        <label class="btn btn-ghost swap swap-rotate">
-          <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" class="theme-controller" value="synthwave" />
+<header class="sticky top-0 z-10 p-3 backdrop-blur-md">
+	<nav class="navbar mx-auto flex max-w-2xl rounded-box bg-base-300">
+		<div class="navbar-start">
+			<a class="btn btn-ghost" href="/">
+				{SITE_TITLE}
+			</a>
+		</div>
+		<ul class="navbar-center flex items-center gap-1">
+			<li>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+			</li>
+			<li>
+				<HeaderLink href="/about">About</HeaderLink>
+			</li>
+		</ul>
+		<ul class="navbar-end">
+			<li>
+				<HeaderLink class="btn btn-ghost" href="https://github.com/withastro/astro" target="_blank">
+					<Icon name={'radix-icons:github-logo'} title="github" />
+				</HeaderLink>
+			</li>
+			<li>
+				<label class="btn btn-ghost swap swap-rotate">
+					<!-- this hidden checkbox controls the state -->
+					<input type="checkbox" class="theme-controller" value="synthwave" />
 
-          <!-- sun icon -->
-          <Icon name="radix-icons:sun" class="swap-on fill-current" />
+					<!-- sun icon -->
+					<Icon name="radix-icons:sun" class="swap-on fill-current" />
 
-          <!-- moon icon -->
-          <Icon name="radix-icons:moon" class="swap-off fill-current" />
-        </label>
-      </li>
-    </ul>
-  </nav>
+					<!-- moon icon -->
+					<Icon name="radix-icons:moon" class="swap-off fill-current" />
+				</label>
+			</li>
+		</ul>
+	</nav>
 </header>

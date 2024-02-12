@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = SITE.title, description = SITE.description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
