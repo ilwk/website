@@ -1,6 +1,6 @@
 ---
 title: 应季水果
-pubDate: 2023-07-20
+date: 2023-07-20
 description: 当前季节最好吃的水果品种
 ---
 

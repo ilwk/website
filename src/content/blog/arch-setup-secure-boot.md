@@ -1,6 +1,6 @@
 ---
 title: ArchLinux最简单设置安全启动的方法
-pubDate: 2022-12-01
+date: 2022-12-01
 description: Arch Linux最简单设置安全启动的方法
 ---
 

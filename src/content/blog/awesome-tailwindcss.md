@@ -1,6 +1,6 @@
 ---
 title: TailwindCSS相关
-pubDate: 2023-06-26
+date: 2023-06-26
 description: 跟 TailwindCSS 相关的项目
 ---
 

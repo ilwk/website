@@ -1,6 +1,6 @@
 ---
 title: 在Linux下设置开发环境
-pubDate: 2023-07-01
+date: 2023-07-01
 description: 我的 Linux 开发环境设置
 ---
 

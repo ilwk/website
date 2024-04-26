@@ -1,6 +1,6 @@
 ---
 title: MacOS 设置
-pubDate: 2023-06-29
+date: 2023-06-29
 tags: ['hot']
 description: 我的 MacOS 设置，主要用于前端开发
 ---

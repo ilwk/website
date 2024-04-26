@@ -1,16 +1,23 @@
-import rss from '@astrojs/rss'
-import { getCollection } from 'astro:content'
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts'
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import { HOME } from "@/consts";
 
-export async function GET(context: any) {
-	const posts = await getCollection('blog')
-	return rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
-		site: context.site,
-		items: posts.map((post) => ({
-			...post.data,
-			link: `/blog/${post.slug}/`
-		}))
-	})
+type Context = {
+  site: string;
+};
+
+export async function GET(context: Context) {
+  const blog = await getCollection("blog");
+
+  const items = [...blog];
+  return rss({
+    title: HOME.TITLE,
+    description: HOME.DESCRIPTION,
+    site: context.site,
+    items: items.map((item) => ({
+      ...item.data,
+      pubDate: item.data.date,
+      link: `/${item.collection}/${item.slug}/`,
+    })),
+  });
 }

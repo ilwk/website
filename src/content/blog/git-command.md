@@ -1,6 +1,6 @@
 ---
 title: Git常用命令
-pubDate: 2022-12-11
+date: 2022-12-11
 description: Git常用命令
 ---
 

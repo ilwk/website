@@ -1,6 +1,6 @@
 ---
 title: Git工作流
-pubDate: 2023-07-06
+date: 2023-07-06
 description: 单纯记录下目前工作的 Git 工作流
 ---
 

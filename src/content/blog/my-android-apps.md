@@ -1,6 +1,6 @@
 ---
 title: 我的安卓应用
-pubDate: 2023-07-06
+date: 2023-07-06
 tags: ['hot']
 description: 收纳了一些好用的开源 APP
 ---

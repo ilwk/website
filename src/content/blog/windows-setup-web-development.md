@@ -1,6 +1,6 @@
 ---
 title: 在Windows上面设置开发环境
-pubDate: 2023-06-29
+date: 2023-06-29
 description: 我的 Windows 电脑环境设置
 ---
 

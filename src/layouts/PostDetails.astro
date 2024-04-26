@@ -9,7 +9,7 @@ type Props = CollectionEntry<'blog'>['data']
 const {
 	title,
 	description,
-	pubDate,
+	date,
 	updatedDate,
 	heroImage = `https://picsum.photos/seed/${title}/800/400`
 } = Astro.props
@@ -37,7 +37,7 @@ import Layout from './Layout.astro'
 			<div class="prose">
 				<div>
 					<div class="mb-2 text-xs text-base-content/60">
-						<FormattedDate date={pubDate} />
+						<FormattedDate date={date} />
 						{
 							updatedDate && (
 								<div class="last-updated-on">

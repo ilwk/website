@@ -1,6 +1,6 @@
 ---
 title: 我喜欢的电影
-pubDate: 2023-07-16
+date: 2023-07-16
 description: 记录下喜欢的电影
 ---
 

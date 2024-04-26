@@ -1,6 +1,6 @@
 ---
 title: Win11新电脑如何跳过联网验证
-pubDate: 2022-12-12
+date: 2022-12-12
 description: Win11新电脑如何跳过联网验证
 ---
 
