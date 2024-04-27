@@ -2,7 +2,7 @@ import type { Site, Metadata, Socials } from "@/types";
 
 export const SITE: Site = {
   WEBSITE: "https://ilwk.vercel.app",
-  NAME: "Astro Nano",
+  NAME: "Home",
   EMAIL: "markhorn.dev@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
@@ -11,7 +11,7 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  DESCRIPTION: "Welcome to my website!",
 };
 
 export const BLOG: Metadata = {
