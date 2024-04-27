@@ -4,7 +4,7 @@ date: 2024-04-23
 description: 用金属水管做的超酷的圣剑
 ---
 
-[cool-sword](../../../public/images/cool-sword.jpg)
+![cool-sword](/images/cool-sword.jpg)
 
 配件清单
 
