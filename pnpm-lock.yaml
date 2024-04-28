@@ -43,13 +43,13 @@ importers:
         version: 5.4.5
     devDependencies:
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       prettier-plugin-astro:
-        specifier: ^0.13.0
+        specifier: 0.13.0
         version: 0.13.0
       prettier-plugin-tailwindcss:
-        specifier: ^0.5.14
+        specifier: 0.5.14
         version: 0.5.14(prettier-plugin-astro@0.13.0)(prettier@3.2.5)
 
 packages:
