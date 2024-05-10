@@ -25,8 +25,8 @@ description: 如何找到一份适合自己的远程工作。
 
 工作资源：
 
-- https://jschimp.com/ - 创建个人资料；公司伸出援手
-- https://github.com/vercel/next.js/discussions - Next/React 作业
+- https://jschimp.com/ - 创建个人资料
+- https://github.com/vercel/next.js/discussions - Next.js 论坛有招聘板块
 - https://www.linkedin.com/ - 更新您的个人资料并将其设置为“寻找工作”
 - https://www.roberthalf.com/ - 致电当地办事处并询问您所在地区的简历建议和工作机会。
 - ChatGPT4 - 将您的简历、LinkedIn 个人资料以及您在本文中所说的所有内容输入 ChatGPT4，然后 1. 向其寻求建议，2. 向其询问可能的职业方向，以及 3. 要求它重写您的简历。
