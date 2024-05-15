@@ -1,7 +1,7 @@
 ---
 title: "AI照片修复网站"
 date: "2024-05-14"
-descriptions: "AI照片修复网站"
+description: "AI照片修复网站"
 ---
 
 - [Remini](https://remini.ai/)
