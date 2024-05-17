@@ -49,7 +49,7 @@ importers:
         specifier: 0.5.14
         version: 0.5.14(prettier-plugin-astro@0.13.0)(prettier@3.2.5)
       typescript:
-        specifier: ^5.4.5
+        specifier: 5.4.5
         version: 5.4.5
 
 packages:
