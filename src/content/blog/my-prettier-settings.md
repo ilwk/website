@@ -54,3 +54,5 @@ Prettier: singleAttributePerLine: false
 </div>
 
 ```
+
+参考文章： [我的Prettier设置](https://vale.rocks/blog/My_Code_Formatting_Guidelines)
