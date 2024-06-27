@@ -13,7 +13,7 @@ importers:
         version: 0.7.0(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.5.2)
       '@astrojs/mdx':
         specifier: ^3.0.0
-        version: 3.1.2(astro@4.11.2(@types/node@20.11.17)(typescript@5.5.2))
+        version: 3.1.2(astro@4.11.3(@types/node@20.11.17)(typescript@5.5.2))
       '@astrojs/rss':
         specifier: ^4.0.6
         version: 4.0.7
@@ -22,13 +22,13 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.11.2(@types/node@20.11.17)(typescript@5.5.2))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@4.11.3(@types/node@20.11.17)(typescript@5.5.2))(tailwindcss@3.4.4)
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.4)
       astro:
         specifier: ^4.8.5
-        version: 4.11.2(@types/node@20.11.17)(typescript@5.5.2)
+        version: 4.11.3(@types/node@20.11.17)(typescript@5.5.2)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -790,8 +790,8 @@ packages:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
 
-  astro@4.11.2:
-    resolution: {integrity: sha512-8ulWb74qY5VBFhDTjw1KMCMEf+EXOoSBy4QC6J1oHIq5tzMGCVRt3sUPzUxD737HVPb+CxOIbj35skN0w535fw==}
+  astro@4.11.3:
+    resolution: {integrity: sha512-SuZbB/71XVn+WqWNCe7XOfHuqhS+k4gj8+A3wluTZQrORGaHUFRn/f8F9Tu5yESQZB1q8UKhahvHwkTV3AdVsg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -850,8 +850,8 @@ packages:
   caniuse-lite@1.0.30001585:
     resolution: {integrity: sha512-yr2BWR1yLXQ8fMpdS/4ZZXpseBgE7o4g41x3a6AJOqZuOi+iE/WdJYAuZ6Y95i4Ohd2Y+9MzIWRR+uGABH4s3Q==}
 
-  caniuse-lite@1.0.30001637:
-    resolution: {integrity: sha512-1x0qRI1mD1o9e+7mBI7XtzFAP4XszbHaVWsMiGbSPLYekKTJF7K+FNk6AsXH4sUpc+qrsI3pVgf1Jdl/uGkuSQ==}
+  caniuse-lite@1.0.30001638:
+    resolution: {integrity: sha512-5SuJUJ7cZnhPpeLHaH0c/HPAnAHZvS6ElWyHK9GSIbVOQABLzowiI2pjmpvZ1WEbkyz46iFd4UXlOHR5SqgfMQ==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2481,12 +2481,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.2(astro@4.11.2(@types/node@20.11.17)(typescript@5.5.2))':
+  '@astrojs/mdx@3.1.2(astro@4.11.3(@types/node@20.11.17)(typescript@5.5.2))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.0
-      astro: 4.11.2(@types/node@20.11.17)(typescript@5.5.2)
+      astro: 4.11.3(@types/node@20.11.17)(typescript@5.5.2)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -2517,9 +2517,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.2(@types/node@20.11.17)(typescript@5.5.2))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.3(@types/node@20.11.17)(typescript@5.5.2))(tailwindcss@3.4.4)':
     dependencies:
-      astro: 4.11.2(@types/node@20.11.17)(typescript@5.5.2)
+      astro: 4.11.3(@types/node@20.11.17)(typescript@5.5.2)
       autoprefixer: 10.4.17(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -3181,7 +3181,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro@4.11.2(@types/node@20.11.17)(typescript@5.5.2):
+  astro@4.11.3(@types/node@20.11.17)(typescript@5.5.2):
     dependencies:
       '@astrojs/compiler': 2.8.1
       '@astrojs/internal-helpers': 0.4.1
@@ -3308,7 +3308,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001637
+      caniuse-lite: 1.0.30001638
       electron-to-chromium: 1.4.812
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -3319,7 +3319,7 @@ snapshots:
 
   caniuse-lite@1.0.30001585: {}
 
-  caniuse-lite@1.0.30001637: {}
+  caniuse-lite@1.0.30001638: {}
 
   ccount@2.0.1: {}
 
