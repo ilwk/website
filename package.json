@@ -10,16 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.0",
-    "@astrojs/mdx": "^3.0.0",
-    "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/mdx": "^3.1.2",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.13",
-    "astro": "^4.8.5",
+    "astro": "^4.11.5",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.4.3"
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
     "prettier": "3.3.2",
