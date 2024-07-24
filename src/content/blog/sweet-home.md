@@ -2,7 +2,7 @@
 title: 我的装修清单
 date: 2023-08-16
 description: 家里装修准备采购的一些东西
-tags: ['hot']
+tags: ["hot"]
 ---
 
 ## 书房

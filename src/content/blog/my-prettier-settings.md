@@ -11,14 +11,14 @@ Prettier: `trailingComma: "all"`
 ```js
 // Bad
 const object = {
-	property1: "content",
-	"property2": "content"
+  property1: "content",
+  property2: "content",
 };
 
 // Good
 const object = {
-	"property1": "content",
-	"property2": "content",
+  property1: "content",
+  property2: "content",
 };
 ```
 
@@ -41,18 +41,10 @@ Prettier: singleAttributePerLine: false
 
 ```html
 // Bad
-<div
-	 class="name"
-	 id="name"
->
-	Content
-</div>
+<div class="name" id="name">Content</div>
 
 // Good
-<div class="name" id="name">
-	Content
-</div>
-
+<div class="name" id="name">Content</div>
 ```
 
 参考文章： [我的Prettier设置](https://vale.rocks/blog/My_Code_Formatting_Guidelines)

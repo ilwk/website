@@ -1,7 +1,7 @@
 ---
 title: MacOS 设置
 date: 2023-06-29
-tags: ['hot']
+tags: ["hot"]
 description: 我的 MacOS 设置，主要用于前端开发
 ---
 
