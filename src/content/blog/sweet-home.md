@@ -9,9 +9,12 @@ tags: ["hot"]
 
 - 升降桌 - 乐歌 E4
 - 音响 - 漫步者 MR4
+- 耳机 - 飞利浦 SHP9500
 - 显示器 - Innocn 27C1U / Redmi显示器 27英寸 4K版
 - 显示器支架 - AOC AM400PLUS
 - 椅子 - Ergomax EVO2
+- 鼠标 - VXE R1
+- 键盘 - Nuphy Air 75
 
 ## 厨房
 
