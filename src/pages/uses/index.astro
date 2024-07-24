@@ -1,0 +1,20 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Container from "@/components/Container.astro";
+
+const post = {
+  data: {
+    title: "Uses",
+    description: "Things I use and like.",
+    date: new Date("2022-01-01"),
+  },
+};
+---
+
+<PageLayout title={post.data.title} description={post.data.description}>
+  <Container>
+    <div class="animate font-semibold text-black dark:text-white">
+      What do i use?
+    </div>
+  </Container>
+</PageLayout>
