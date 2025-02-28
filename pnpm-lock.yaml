@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.7.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.1.0(astro@5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))
+        version: 4.1.0(astro@5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/rss':
         specifier: ^4.0.7
         version: 4.0.11
@@ -22,13 +22,13 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^6.0.0
-        version: 6.0.0(astro@5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 6.0.0(astro@5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.16(tailwindcss@3.4.17)
       astro:
         specifier: ^5.0.0
-        version: 5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -723,8 +723,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.4.0:
-    resolution: {integrity: sha512-7A//zrCtJUGfJcQAt6PDhMu4a6pogvnK54HLXnYlPnKSWQZu/tKIYWfyvocVnTuEYIPExIN3CpjNAFFLoweJVw==}
+  astro@5.4.1:
+    resolution: {integrity: sha512-z9BiBz8pV7pZVn1evZv/9bJil3A9UZNyEjDFH3IjD87ioz95HHGLgbjRbbqF1EwSy8JOLKlMNyuQPqjrX8xqWw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2372,8 +2372,8 @@ packages:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
 
-  yocto-spinner@0.2.0:
-    resolution: {integrity: sha512-Qu6WAqNLGleB687CCGcmgHIo8l+J19MX/32UrSMfbf/4L8gLoxjpOYoiHT1asiWyqvjRZbgvOhLlvne6E5Tbdw==}
+  yocto-spinner@0.2.1:
+    resolution: {integrity: sha512-lHHxjh0bXaLgdJy3cNnVb/F9myx3CkhrvSOEVTkaUgNMXnYFa2xYPVhtGnqhh3jErY2gParBOHallCbc7NrlZQ==}
     engines: {node: '>=18.19'}
 
   yoctocolors@2.1.1:
@@ -2475,12 +2475,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.1.0(astro@5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.1.0(astro@5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.2.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2509,9 +2509,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@6.0.0(astro@5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.0(astro@5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -3054,7 +3054,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.4.0(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.4.1(@types/node@20.11.17)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.4
       '@astrojs/internal-helpers': 0.6.0
@@ -3111,7 +3111,7 @@ snapshots:
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
-      yocto-spinner: 0.2.0
+      yocto-spinner: 0.2.1
       zod: 3.24.2
       zod-to-json-schema: 3.24.3(zod@3.24.2)
       zod-to-ts: 1.2.0(typescript@5.7.3)(zod@3.24.2)
@@ -5158,7 +5158,7 @@ snapshots:
 
   yocto-queue@1.1.1: {}
 
-  yocto-spinner@0.2.0:
+  yocto-spinner@0.2.1:
     dependencies:
       yoctocolors: 2.1.1
 
