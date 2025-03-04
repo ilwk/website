@@ -17,9 +17,11 @@ const { title, description } = Astro.props;
   <head>
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
   </head>
-  <body>
+  <body
+    class="flex flex-col bg-stone-100 dark:bg-stone-900 text-black/50 dark:text-white/75"
+  >
     <Header />
-    <main>
+    <main class="flex-1 py-32">
       <slot />
     </main>
     <Footer />
