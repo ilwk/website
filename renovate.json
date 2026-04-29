@@ -1,11 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["schedule:weekly"],
+  "timezone": "Asia/Shanghai",
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchDepTypes": ["dependencies", "devDependencies"],
-      "automerge": true
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "dev dependencies",
+      "automerge": true,
+      "automergeType": "branch"
     }
-  ],
-  "extends": ["config:best-practices"]
+  ]
 }
